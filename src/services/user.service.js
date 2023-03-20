@@ -41,11 +41,7 @@ export const Login = async (body) => {
     // here data.password will be decrypted and compared with body.password
     throw new Error('Wrong password');
   }
-  const SecretKey = process.env.SECRETKEY;
-  var token = jwt.sign(
-    { _id: data._id, name: data.name, email: data.email },SecretKey
-  );
-  return token;
+  return data;
 };
 
 //--------------------------------------------------
