@@ -20,16 +20,4 @@ router.put('/:_id', userAuth, notecontroller.updatenote);
 //route to delete a single user by their user id
 router.delete('/:_id', userAuth, notecontroller.deletenote);
 
-//add in trash true
-router.put('/:_id/addtrash', userAuth, notecontroller.Addintrash);
-
-//remove form trash false
-router.put('/:_id/removetrash', userAuth, notecontroller.Removeformtrash);
-
-//add in archive true
-router.put('/:_id/addArchive', userAuth, notecontroller.AddinArchive);
-
-//remove form archive false
-router.put('/:_id/removeArchive', userAuth, notecontroller.RemoveformArchive);
-
 export default router;
