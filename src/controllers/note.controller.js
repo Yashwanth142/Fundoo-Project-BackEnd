@@ -42,58 +42,6 @@ export const getNote = async (req, res, next) => {
   }
 };
 
-export const Addintrash = async (req, res, next) => {
-  try {
-    const data = await NoteService.Addintrash(req.params._id);
-    res.status(HttpStatus.OK).json({
-      code: HttpStatus.OK,
-      data: data,
-      message: 'trash status changed to true successfully'
-    });
-  } catch (error) {
-    next(error);
-  }
-};
-
-export const Removeformtrash = async (req, res, next) => {
-  try {
-    const data = await NoteService.Removeformtrash(req.params._id);
-    res.status(HttpStatus.OK).json({
-      code: HttpStatus.OK,
-      data: data,
-      message: 'trash status changed to false successfully'
-    });
-  } catch (error) {
-    next(error);
-  }
-};
-
-export const AddinArchive = async (req, res, next) => {
-  try {
-    const data = await NoteService.AddinArchive(req.params._id);
-    res.status(HttpStatus.OK).json({
-      code: HttpStatus.OK,
-      data: data,
-      message: 'Archive status changed to true successfully'
-    });
-  } catch (error) {
-    next(error);
-  }
-};
-
-export const RemoveformArchive = async (req, res, next) => {
-  try {
-    const data = await NoteService.RemoveformArchive(req.params._id);
-    res.status(HttpStatus.OK).json({
-      code: HttpStatus.OK,
-      data: data,
-      message: 'Archive status changed to false successfully'
-    });
-  } catch (error) {
-    next(error);
-  }
-};
-
 export const updatenote = async (req, res, next) => {
   try {
     const data = await NoteService.updatenote(req.params._id, req.body);
